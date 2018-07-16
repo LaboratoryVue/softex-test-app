@@ -1,5 +1,5 @@
 <template>
-  <div class="card wrapper picture">
+  <div class="col-xs-12 col-md-8 offset-md-2 card wrapper picture">
     <img class="card-img-top picture__image" :src="picture.url" :alt="picture.id">
     <div class="card-body picture__content">
       <p class="card-text picture__title">
@@ -7,7 +7,7 @@
       </p>
     </div>
     <div class="picture__controls">
-      <button @click="goBack()" type="button" class="btn btn-info text-capitalize btn-large">back to slides</button>
+      <button @click="goBack()" type="button" class="btn btn-info text-capitalize btn-lg">back to slides</button>
     </div>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .picture {
-  //
+  padding-top: 1rem;
 
   &__title {
     font-size: 2rem;

@@ -22,6 +22,10 @@ export default {
     color: #2c3e50;
     text-transform: capitalize;
 
+    &:hover {
+      color: #42b983;
+    }
+
     &.router-link-exact-active {
       color: #42b983;
     }
