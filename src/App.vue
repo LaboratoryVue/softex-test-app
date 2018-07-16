@@ -28,7 +28,6 @@ export default {
   methods: {
     handleScroll() {
       this.scrolled = window.scrollY > this.offset;
-      console.log(this.scrolled);
     }
   },
   created() {
