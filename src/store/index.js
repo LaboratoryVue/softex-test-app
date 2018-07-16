@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import axios from 'axios';
+import axios from '../plugins/axios.js';
 Vue.use(Vuex);
-
-const url = 'https://jsonplaceholder.typicode.com/photos';
 
 const state = {
   pictures: []
@@ -12,7 +10,7 @@ const state = {
 const mutations = {
   GET_PICLAS(state) {
     axios
-      .get(url)
+      .get('photos')
       .then(response => response.data.slice(0, 21))
       .then(data => (state.pictures = data))
       .catch(error => console.log(error));
