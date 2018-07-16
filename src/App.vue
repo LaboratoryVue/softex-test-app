@@ -2,7 +2,7 @@
   <div id="app" class="container-fluid">
     <div class="row">
       <div class="col">
-        <navigation />
+        <navigation :scrolling="scrolled" />
       </div>
     </div>
         <div class="row">
@@ -19,6 +19,24 @@
 import Navigation from './components/TheNavigation';
 export default {
   name: 'app',
+  data() {
+    return {
+      scrolled: false,
+      offset: 5
+    };
+  },
+  methods: {
+    handleScroll() {
+      this.scrolled = window.scrollY > this.offset;
+      console.log(this.scrolled);
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   components: {
     Navigation
   }
