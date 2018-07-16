@@ -45,10 +45,22 @@ export default {
     }
   }
 }
+
 .nav-scrolled {
   background-color: aquamarine;
   padding: 0.6rem;
   border-bottom-width: 2px;
   border-bottom-color: lighten($navLink, 0.6);
+}
+
+@media screen and (max-width: $small) {
+  .nav {
+    padding: .6rem 1rem;
+    justify-content: space-around;
+
+    & .nav-link {
+      padding: .2rem .4rem;
+    }
+  }
 }
 </style>

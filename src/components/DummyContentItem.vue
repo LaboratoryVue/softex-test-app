@@ -24,6 +24,7 @@ export default {
 
   .dummy {
     //
+
     &__title {
       font-size: 2rem;
       text-transform: capitalize;
