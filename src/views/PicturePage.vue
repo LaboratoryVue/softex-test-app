@@ -29,16 +29,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/global-styles.scss';
+
 .picture {
   padding-top: 1rem;
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-transform: capitalize;
   }
 
   &__controls {
     padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: $small) {
+  .picture__title {
+    font-size: 1.2rem;
+  }
+  .picture__controls {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $xsmall) {
+  .picture__controls {
+    padding: .6rem;
+    text-align: center;
   }
 }
 </style>
