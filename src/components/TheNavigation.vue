@@ -24,22 +24,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/global-styles.scss';
+
 .nav {
   padding: 1rem;
-  border-bottom: 1px solid #2c3e50;
+  border-bottom: 1px solid $navLink;
   transition: all 0.1s;
 
   & > a {
     font-weight: 700;
-    color: #2c3e50;
+    color: $navLink;
     text-transform: capitalize;
 
     &:hover {
-      color: #42b983;
+      color: $navLinkActive;
     }
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $navLinkActive;
     }
   }
 }
@@ -47,6 +49,6 @@ export default {
   background-color: aquamarine;
   padding: 0.6rem;
   border-bottom-width: 2px;
-  border-bottom-color: lighten(#2c3e50, 0.6);
+  border-bottom-color: lighten($navLink, 0.6);
 }
 </style>
