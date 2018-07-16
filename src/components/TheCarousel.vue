@@ -72,4 +72,10 @@ export default {
   }
 }
 
+@media (max-width: 640px) and (min-width: 420px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
 </style>
