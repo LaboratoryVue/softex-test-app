@@ -1,19 +1,14 @@
 <template>
   <swiper :options="swiperOption">
-    <swiper-slide v-for="slide in slides" :key="slide.id">
-      <a :href="`/picture/${slide.id}`">
-        <section>
-          <img :src="slide.url" :alt="slide.title">
-        </section>
-      </a>
-    </swiper-slide>
+    <caroussel-item v-for="slide in slides" :key="slide.id" :slide="slide" />
     <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div>
   </swiper>
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import { swiper } from 'vue-awesome-swiper';
+import CarousselItem from '../components/CarousselItem';
 export default {
   name: 'Carousel',
   data() {
@@ -49,7 +44,7 @@ export default {
   },
   components: {
     swiper,
-    swiperSlide
+    CarousselItem
   },
   computed: {
     slides() {
@@ -61,13 +56,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../node_modules/swiper/dist/css/swiper.css';
-img {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  outline: none;
-}
 </style>
