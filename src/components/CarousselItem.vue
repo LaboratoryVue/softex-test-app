@@ -25,7 +25,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/global-styles.scss';
 @import '../../node_modules/swiper/dist/css/swiper.css';
+
 .slide {
   //
   &__image {
@@ -33,10 +35,5 @@ export default {
     display: block;
     height: auto;
   }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  outline: none;
 }
 </style>
