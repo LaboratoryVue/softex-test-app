@@ -60,6 +60,11 @@ export default {
 @import '../assets/global-styles.scss';
 @import '../../node_modules/swiper/dist/css/swiper.css';
 
+.swiper-button-prev,
+.swiper-button-next {
+  outline: none;
+}
+
 @media screen and (max-width: $small) {
   .swiper-button-prev,
   .swiper-button-next {
